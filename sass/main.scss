@@ -13,8 +13,8 @@ $color-dark-grayish-red: hsl(0, 6%, 24%);
 //Gradient
 $color-gradient-firststart: hsl(0, 0%, 100%);
 $color-gradient-firstend: hsl(0, 100%, 98%);
-$color-gradient-secondstart: hsl(0, 80%, 86%); 
-$color-gradient-secondend: hsl(0, 74%, 74%);
+$color-gradient-secondstart: hsla(0, 80%, 86%,.1); 
+$color-gradient-secondend: hsla(0, 74%, 74%,.1);
 
 $font-size: 16px;
 
@@ -35,13 +35,14 @@ $Desktop: 1440px;
 
 body {
 	width: $Desktop;
+	height: 800px;
 	font-size: $font-size;
 	font-family:'Josefin Sans', sans-serif;
-	background-image: -webkit-linear-gradient(135deg, hsla(0, 80%, 86%,.1), hsla(0,74%,74%,.1));
-	background-image:    -moz-linear-gradient(135deg, hsla(0, 80%, 86%,.1), hsla(0,74%,74%,.1));
-	background-image:     -ms-linear-gradient(135deg, hsla(0, 80%, 86%,.1), hsla(0,74%,74%,.1));
-	background-image:      -o-linear-gradient(135deg, hsla(0, 80%, 86%,.1), hsla(0,74%,74%,.1));
-	background-image:         linear-gradient(135deg, hsla(0, 80%, 86%,.1), hsla(0,74%,74%,.1));
+	background-image: -webkit-linear-gradient(135deg, $color-gradient-secondstart, $color-gradient-secondend);
+	background-image:    -moz-linear-gradient(135deg, $color-gradient-secondstart, $color-gradient-secondend);
+	background-image:     -ms-linear-gradient(135deg, $color-gradient-secondstart, $color-gradient-secondend);
+	background-image:      -o-linear-gradient(135deg, $color-gradient-secondstart, $color-gradient-secondend);
+	background-image:         linear-gradient(135deg, $color-gradient-secondstart, $color-gradient-secondend);
 		// @media screen and (max-width: $Mobile) {
 	 //    width: $Mobile;
 	 //    float: none;
@@ -50,12 +51,13 @@ body {
 
 .container {
 	width: 50%;
-	height: 100vh;
+	height: 100%;
 	float: left;
 	padding-left: 160px;
 		@media screen and (max-width: $Mobile) {
 	    width: 100%;
 	    float: left;
+	    padding-left: 50px;
 	  	}
 }
 
@@ -79,6 +81,7 @@ body {
 	margin-top: 40px;
 	width: 425px;
 	height: 75px;
+	color: $color-primary-desatured;
 }
 
 .formsubmit {
@@ -93,7 +96,11 @@ body {
 	height: 65px;
 	font-size: 26px;
 	border-radius: 100px;
+	border:1px solid hsla(0, 6%, 24%,.2);
 	position: absolute;
+		&::placeholder {
+ 		 color: hsla(0, 6%, 24%,.2);
+		}
 }
 
 .btn-email {
@@ -102,19 +109,25 @@ body {
 	border-radius: 100px;
 	right: 0%;
 	position: absolute;
+	border-style: none;
+	// background-image: -webkit-linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0,74%,74%));
+	background-image:  linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0,74%,74%));
 }
 
 .image_hero {
 	width: 50%;
-	height: 100vh;
+	height: 100%; 
 	float: right;
- 		@media screen and (max-width: $Mobile) {
-	    	width: 100%;
-	    	float: left;
-		}
 	background-image: url("../images/hero-desktop.jpg");
 	background-repeat: no-repeat;
  	background-size: cover;
+ 		@media screen and (max-width: $Mobile) {
+	    	width: 100%;
+	    	float: left;
+	    	background-image: url("../images/hero-mobile.jpg");
+			background-repeat: no-repeat;
+ 			background-size: cover;
+		}
 }
 
 .clearfix::after {

@@ -7,6 +7,7 @@
 
 body {
   width: 1440px;
+  height: 800px;
   font-size: 16px;
   font-family: 'Josefin Sans', sans-serif;
   background-image: -webkit-linear-gradient(135deg, rgba(248, 191, 191, 0.1), rgba(238, 140, 140, 0.1));
@@ -17,13 +18,14 @@ body {
 
 .container {
   width: 50%;
-  height: 100vh;
+  height: 100%;
   float: left;
   padding-left: 160px; }
   @media screen and (max-width: 375px) {
     .container {
       width: 100%;
-      float: left; } }
+      float: left;
+      padding-left: 50px; } }
 
 .header-logo {
   margin-top: 65px; }
@@ -40,7 +42,8 @@ body {
 .paragraph {
   margin-top: 40px;
   width: 425px;
-  height: 75px; }
+  height: 75px;
+  color: #ce9797; }
 
 .formsubmit {
   margin-top: 50px;
@@ -53,18 +56,23 @@ body {
   height: 65px;
   font-size: 26px;
   border-radius: 100px;
+  border: 1px solid rgba(65, 58, 58, 0.2);
   position: absolute; }
+  .email_input::placeholder {
+    color: rgba(65, 58, 58, 0.2); }
 
 .btn-email {
   width: 95px;
   height: 65px;
   border-radius: 100px;
   right: 0%;
-  position: absolute; }
+  position: absolute;
+  border-style: none;
+  background-image: linear-gradient(135deg, #f8bfbf, #ee8c8c); }
 
 .image_hero {
   width: 50%;
-  height: 100vh;
+  height: 100%;
   float: right;
   background-image: url("../images/hero-desktop.jpg");
   background-repeat: no-repeat;
@@ -72,7 +80,10 @@ body {
   @media screen and (max-width: 375px) {
     .image_hero {
       width: 100%;
-      float: left; } }
+      float: left;
+      background-image: url("../images/hero-mobile.jpg");
+      background-repeat: no-repeat;
+      background-size: cover; } }
 
 .clearfix::after {
   content: "";
