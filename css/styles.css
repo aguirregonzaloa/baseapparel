@@ -20,6 +20,10 @@ body {
   height: 100vh;
   float: left;
   padding-left: 160px; }
+  @media screen and (max-width: 375px) {
+    .container {
+      width: 100%;
+      float: left; } }
 
 .header-logo {
   margin-top: 65px; }
@@ -39,15 +43,36 @@ body {
   height: 75px; }
 
 .formsubmit {
-  margin-top: 50px; }
+  margin-top: 50px;
+  width: 425px;
+  height: 65px;
+  position: relative; }
+
+.email_input {
+  width: 425px;
+  height: 65px;
+  font-size: 26px;
+  border-radius: 100px;
+  position: absolute; }
+
+.btn-email {
+  width: 95px;
+  height: 65px;
+  border-radius: 100px;
+  right: 0%;
+  position: absolute; }
 
 .image_hero {
   width: 50%;
   height: 100vh;
-  float: left;
+  float: right;
   background-image: url("../images/hero-desktop.jpg");
   background-repeat: no-repeat;
   background-size: cover; }
+  @media screen and (max-width: 375px) {
+    .image_hero {
+      width: 100%;
+      float: left; } }
 
 .clearfix::after {
   content: "";

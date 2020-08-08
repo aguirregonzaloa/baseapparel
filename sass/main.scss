@@ -18,6 +18,9 @@ $color-gradient-secondend: hsl(0, 74%, 74%);
 
 $font-size: 16px;
 
+$Mobile: 375px;
+$Desktop: 1440px;
+
 *, 
 *::before,
 *::after{
@@ -31,7 +34,7 @@ $font-size: 16px;
 // }
 
 body {
-	width: 1440px;
+	width: $Desktop;
 	font-size: $font-size;
 	font-family:'Josefin Sans', sans-serif;
 	background-image: -webkit-linear-gradient(135deg, hsla(0, 80%, 86%,.1), hsla(0,74%,74%,.1));
@@ -39,6 +42,10 @@ body {
 	background-image:     -ms-linear-gradient(135deg, hsla(0, 80%, 86%,.1), hsla(0,74%,74%,.1));
 	background-image:      -o-linear-gradient(135deg, hsla(0, 80%, 86%,.1), hsla(0,74%,74%,.1));
 	background-image:         linear-gradient(135deg, hsla(0, 80%, 86%,.1), hsla(0,74%,74%,.1));
+		// @media screen and (max-width: $Mobile) {
+	 //    width: $Mobile;
+	 //    float: none;
+	 //  	}
 }
 
 .container {
@@ -46,6 +53,10 @@ body {
 	height: 100vh;
 	float: left;
 	padding-left: 160px;
+		@media screen and (max-width: $Mobile) {
+	    width: 100%;
+	    float: left;
+	  	}
 }
 
 .header-logo{
@@ -72,12 +83,35 @@ body {
 
 .formsubmit {
 	margin-top: 50px;
+	width: 425px;
+	height: 65px;
+	position: relative;
+}
+
+.email_input {
+	width: 425px;
+	height: 65px;
+	font-size: 26px;
+	border-radius: 100px;
+	position: absolute;
+}
+
+.btn-email {
+	width: 95px;
+	height: 65px;
+	border-radius: 100px;
+	right: 0%;
+	position: absolute;
 }
 
 .image_hero {
 	width: 50%;
 	height: 100vh;
-	float: left;
+	float: right;
+ 		@media screen and (max-width: $Mobile) {
+	    	width: 100%;
+	    	float: left;
+		}
 	background-image: url("../images/hero-desktop.jpg");
 	background-repeat: no-repeat;
  	background-size: cover;
