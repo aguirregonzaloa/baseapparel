@@ -16,6 +16,22 @@ body {
   background-image: -o-linear-gradient(135deg, rgba(248, 191, 191, 0.1), rgba(238, 140, 140, 0.1));
   background-image: linear-gradient(135deg, rgba(248, 191, 191, 0.1), rgba(238, 140, 140, 0.1)); }
 
+.image_hero {
+  width: 50%;
+  height: 100%;
+  float: right;
+  background-image: url("../images/hero-desktop.jpg");
+  background-repeat: no-repeat;
+  background-size: cover; }
+  @media screen and (max-width: 375px) {
+    .image_hero {
+      margin-top: 150px;
+      width: 100%;
+      float: left;
+      background-image: url("../images/hero-mobile.jpg");
+      background-repeat: no-repeat;
+      background-size: cover; } }
+
 .container {
   width: 50%;
   height: 100%;
@@ -29,6 +45,11 @@ body {
 
 .header-logo {
   margin-top: 65px; }
+  @media screen and (max-width: 375px) {
+    .header-logo {
+      margin-top: 35px;
+      top: 0;
+      position: absolute; } }
 
 .heading_title {
   margin-top: 140px;
@@ -48,7 +69,7 @@ body {
 .formsubmit {
   margin-top: 50px;
   width: 425px;
-  height: 65px;
+  height: 95px;
   position: relative; }
 
 .email_input {
@@ -70,20 +91,11 @@ body {
   border-style: none;
   background-image: linear-gradient(135deg, #f8bfbf, #ee8c8c); }
 
-.image_hero {
-  width: 50%;
-  height: 100%;
-  float: right;
-  background-image: url("../images/hero-desktop.jpg");
-  background-repeat: no-repeat;
-  background-size: cover; }
-  @media screen and (max-width: 375px) {
-    .image_hero {
-      width: 100%;
-      float: left;
-      background-image: url("../images/hero-mobile.jpg");
-      background-repeat: no-repeat;
-      background-size: cover; } }
+.email_alert {
+  width: 100%;
+  text-align: center;
+  bottom: 0;
+  position: absolute; }
 
 .clearfix::after {
   content: "";
