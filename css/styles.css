@@ -93,6 +93,12 @@ body {
   position: relative;
   display: inline-block;
 }
+.formsubmit:invalid .email_alert {
+  display: block;
+}
+.formsubmit:invalid .icon-error {
+  display: block;
+}
 
 .email_input {
   width: 100%;
@@ -109,6 +115,9 @@ body {
 }
 .email_input:focus, .email_input:active {
   border: 1px solid rgba(65, 58, 58, 0.5);
+}
+.email_input:invalid {
+  border: 1px solid #cc0000;
 }
 
 .btn-email {
@@ -135,6 +144,13 @@ body {
   box-shadow: 1px 5px 10px #f8bfbf;
 }
 
+.icon-error {
+  top: 20%;
+  left: 68%;
+  position: absolute;
+  display: none;
+}
+
 .email_alert {
   width: 100%;
   padding-left: 25px;
@@ -142,6 +158,7 @@ body {
   color: #ce9797;
   bottom: 0;
   position: absolute;
+  display: none;
 }
 
 .clearfix::after {

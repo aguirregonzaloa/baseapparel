@@ -118,6 +118,12 @@ body {
 	height: 95px;
 	position: relative;
 	display: inline-block;
+		&:invalid .email_alert {
+			display: block;
+		}
+		&:invalid .icon-error {
+			display: block;
+		}
 }
 
 .email_input {
@@ -137,6 +143,10 @@ body {
 		&:active {
 			border: 1px solid hsla(0, 6%, 24%,.5);
 		}
+		&:invalid {
+			border: 1px solid hsla(0, 100%, 40%, 1);
+		}
+		
 }
 
 .btn-email {
@@ -167,14 +177,21 @@ body {
 		}
 }
 
+.icon-error {
+	top: 20%;
+	left: 68%;
+	position: absolute;
+	display: none;
+}
+
 .email_alert {
 	width: 100%;
 	padding-left: 25px;
-	// height: 100%;
 	text-align: left;
 	color: $color-primary-desatured;
 	bottom:0;
 	position: absolute;
+	display: none;
 }
 
 
